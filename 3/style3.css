@@ -1,0 +1,40 @@
+html, body {
+    height: 100vh;
+  background: linear-gradient(90deg, rgb(77 179 108) 0%, rgb(119 171 106) 100%);
+  font-family: monospace;
+  font-size: 20px;
+  }
+  
+  #forma{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid;
+  }
+  #form1{
+    padding: 2vw;
+    padding-bottom: 0;
+  }
+  #button{
+
+    position: absolute;
+    top:2%;
+    right: 2%;
+margin: 6px;
+  }
+  .form-group{
+    padding-bottom: 10px;
+  }
+  #btnend{
+    margin-top: 30px;
+    position: relative;
+    bottom:0;
+  }
+  #closebutton{
+  float: right;
+  }
+  a:link {
+  text-decoration: none;
+  }
