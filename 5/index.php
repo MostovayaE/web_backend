@@ -148,6 +148,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 // Иначе, если запрос был методом POST, т.е. нужно проверить данные и сохранить их в XML-файл.
 else {
+    
+    if (isset($_POST['logout']) && $_POST['logout'] == 'true') {
+        session_destroy();
+        setcookie(session_name(), '', time() - 3600);
+        setcookie('PHPSESSID', '', time() - 3600, '/');
+       
+        header('Location: ./');
+        exit();
+    }
+    
   // Проверяем ошибки.
   $errors = FALSE;
  if (empty($_POST['fio']) ) {
@@ -302,12 +312,7 @@ else {
             }
         }
 
-          foreach ($result2 as $res) {
-            
-            if($values['abilities'][$res["id_ab"]-1] = empty($res) ? '' : strip_tags($res["id_ab"])){
-              $flag=true;
-            }
-        }
+ 
 
 
           if($flag){

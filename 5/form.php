@@ -29,6 +29,17 @@ if (!empty($messages)) {
 
 // Далее выводим форму отмечая элементы с ошибками классом error
 // и задавая начальные значения элементов ранее сохраненными.
+?>    
+
+<?php
+if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login'])){
+    echo '
+        <form action="" method="POST" >
+            <input type="hidden" name="logout" value="true">
+            <button type="submit">Выйти</button>
+        </form>
+    ';
+}
 ?>
         <form id="form1" action="" method="POST">
             <div class="form-group">
@@ -81,6 +92,7 @@ if (!empty($messages)) {
             <input type="submit" id="btnend" class="btn btn-primary" value="Отправить">
         </form>
     </div>
+
 </body>
 
 
