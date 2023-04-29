@@ -1,0 +1,38 @@
+html, body {
+    height: 100vh;
+  background: linear-gradient(90deg, rgb(77 179 108) 0%, rgb(119 171 106) 100%);
+  font-family: monospace;
+  font-size: 20px;
+  }
+  
+  #forma{
+	
+    margin: 30px auto;
+    background-color: white;
+    border: 2px solid;
+  }
+  #form1{
+    padding: 2vw;
+    padding-bottom: 0;
+  }
+
+  .form-group{
+    padding-bottom: 10px;
+  }
+  #btnend{
+    margin-top: 30px;
+    position: relative;
+    bottom:0;
+  }
+  #closebutton{
+  float: right;
+  }
+  a:link {
+  text-decoration: none;
+  }
+  .error {
+  border: 2px solid red;
+}
+#messages{
+	text-align: center;
+}
