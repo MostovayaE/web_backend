@@ -63,7 +63,7 @@ else{
 }
 
 
-if (empty($_POST['bio']) || !preg_match('^[А-Яа-яA-Za-z\n\r\s.,]*$', $_POST['bio'])) {
+if (empty($_POST['bio']) || !preg_match('/^([а-яА-ЯЁёa-zA-Z0-9_,.\s-]+)$/u', $_POST['bio'])) {
   print('Заполните биографию.<br/>');
   $errors = TRUE;
 }
@@ -83,9 +83,9 @@ if ($errors) {
 
 // Сохранение в базу данных.
 
-$user = 'u52843';
-$pass = '5813998';
-$db = new PDO('mysql:host=localhost;dbname=u52843', $user, $pass,
+$user = 'u52959';
+$pass = '9799244';
+$db = new PDO('mysql:host=localhost;dbname=u52959', $user, $pass,
 [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
 
 // Подготовленный запрос. Не именованные метки.
