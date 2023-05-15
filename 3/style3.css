@@ -1,6 +1,6 @@
 html, body {
     height: 100vh;
-  background: linear-gradient(90deg, rgb(77 179 108) 0%, rgb(119 171 106) 100%);
+  background: rgba(107, 60, 60, 0.815);
   font-family: monospace;
   font-size: 20px;
   }
