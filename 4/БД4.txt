@@ -1,0 +1,57 @@
+Структура
+
+CREATE TABLE application (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(128) NOT NULL DEFAULT '',
+  email varchar(128) NOT NULL DEFAULT '',
+  date_of_birth DATE,
+  gender varchar(1) NOT NULL,
+  limbs int(1) unsigned NOT NULL,
+  bio TEXT NOT NULL DEFAULT '',
+  checkbox int(1) unsigned NOT NULL,
+  PRIMARY KEY (id)
+);
+CREATE TABLE app_ability(
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  id_app int(10) unsigned,
+  id_ab int(10) unsigned,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE ability (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  title varchar(128) NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
+);
+
+INSERT INTO ability (title) values ('бессмертие');
+INSERT INTO ability (title) values ('прохождение сквозь стены');
+INSERT INTO ability (title) values ('левитация');
+
+Вывод
+
+MariaDB [u52959]> select * from application;
++----+------+-----------------------+---------------+--------+-------+------+----------+
+| id | name | email                 | date_of_birth | gender | limbs | bio  | checkbox |
++----+------+-----------------------+---------------+--------+-------+------+----------+
+|  1 | meow | mostovaya03@yandex.ru | 2023-03-24    | w      |     2 | mmmm |        1 |
++----+------+-----------------------+---------------+--------+-------+------+----------+
+1 row in set (0.058 sec)
+
+MariaDB [u52959]> select * from app_ability;
++----+--------+-------+
+| id | id_app | id_ab |
++----+--------+-------+
+|  1 |      1 |     2 |
++----+--------+-------+
+1 row in set (0.063 sec)
+
+MariaDB [u52959]> select * from ability;
++----+------------------------------------------------+
+| id | title                                          |
++----+------------------------------------------------+
+|  1 | бессмертие                                     |
+|  2 | прохождение сквозь стены                       |
+|  3 | левитация                                      |
++----+------------------------------------------------+
+3 rows in set (0.053 sec)
